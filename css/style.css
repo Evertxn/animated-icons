@@ -1,0 +1,40 @@
+body{
+    background: #333333;
+}
+
+.battery{
+    font-size: 72px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.battery:before{
+    content: "\f244";
+    animation-name: battery;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes battery {
+    20% {content: "\f244"; color: #C0392B}
+    40% {content: "\f243"; color: #E74C3C;}
+    60% {content: "\f242"; color: #F1C40F;}
+    80% {content: "\f241"; color: #27AE60;}
+    100% {content: "\f240"; color: #2ECC71;}
+}
+
+#glass{
+    font-size: 100px;
+    position: absolute;
+    left: 595px;
+    top: 15%;
+}
+
+#chain{
+    font-size: 100px;
+    position: absolute;
+    left: 595px;
+    top: 70%;
+}

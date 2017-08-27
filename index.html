@@ -6,21 +6,19 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Animicons</title>
-    <style>
-        #glass, #battery{
-            font-size:100px;
-        }
 
-    </style>
 </head>
 <body>
 
     <div id="glass" class="fa"></div>
 
-    <br><br>
+    <div class="battery fa"></div>
 
-    <div id="battery" class="fa"></div>
+    <div id="chain" class="fa"></div>
+
+
 
 
     <script>
@@ -40,38 +38,50 @@
         // Start the animation
         hourStart();
         // Animate every 3 seconds
-        setInterval(hourStart, 4000);
+        setInterval(hourStart, 3000);
 
+        // Hourglass Animation
+        function breakChain() {
+            let chain = document.getElementById('chain');
+            chain.innerHTML = "&#xf0c1;";
 
-        // Battery Animation
-        function chargeBattery(){
-            let battery = document.getElementById('battery');
-            battery.innerHTML = "&#xf244;";
-
-            setTimeout(function() {
-                battery.innerHTML = "&#xf243;";
+            setTimeout(function(){
+                chain.innerHTML = "&#xf127;";
             }, 1000);
-
-            setTimeout(function() {
-                battery.innerHTML = "&#xf242;";
-            }, 2000);
-
-            setTimeout(function() {
-                battery.innerHTML = "&#xf241;";
-            }, 3000);
-
-            setTimeout(function() {
-                battery.innerHTML = "&#xf240;";
-            }, 4000);
         }
         // Start the animation
-        chargeBattery();
+        breakChain();
+        // Animate every 3 seconds
+        setInterval(breakChain, 2000);
 
-        // Run every 5 seconds
-        setInterval(chargeBattery, 5000);
+//         JAVASCRIPT BATTERY
 
-
-
+//        // Battery Animation
+//        function chargeBattery(){
+//            let battery = document.getElementById('battery');
+//            battery.innerHTML = "&#xf244;";
+//
+//            setTimeout(function() {
+//                battery.innerHTML = "&#xf243;";
+//            }, 1000);
+//
+//            setTimeout(function() {
+//                battery.innerHTML = "&#xf242;";
+//            }, 2000);
+//
+//            setTimeout(function() {
+//                battery.innerHTML = "&#xf241;";
+//            }, 3000);
+//
+//            setTimeout(function() {
+//                battery.innerHTML = "&#xf240;";
+//            }, 4000);
+//        }
+//        // Start the animation
+//        chargeBattery();
+//
+//        // Run every 5 seconds
+//        setInterval(chargeBattery, 5000);
     </script>
 
 </body>
